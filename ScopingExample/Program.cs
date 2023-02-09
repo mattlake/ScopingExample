@@ -5,7 +5,9 @@ IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
         services.AddDatabaseContext();
-        services.AddHostedService<Worker>();
+        
+        // services.AddHostedService<BrokenWorker>();
+        services.AddHostedService<WorkingWorker>();
     })
     .Build();
 
